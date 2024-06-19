@@ -1,6 +1,13 @@
-## ![IMG_20240615_152038_494](D:\github\arknights\media\IMG_20240615_152038_494.jpg)
+<p align="center" width="100%">
+  <img src="https://github.com/shedding-ash/Kal-tsit-LLM/media/kal.jpg" width="100%">
+</p>
 
-本项目数据来源于https://prts.wiki/及[yuanyan3060/ArknightsGameResource: 明日方舟客户端素材 (github.com)](https://github.com/yuanyan3060/ArknightsGameResource)，模型使用 [xtuner](https://github.com/InternLM/xtuner) 在 [InternLM2](https://github.com/InternLM/InternLM) 的基础上指令微调而来
+本项目数据来源于
+
+- [PRTS](https://prts.wiki/)
+- [ArknightsGameResource](https://github.com/yuanyan3060/ArknightsGameResource)
+
+模型使用 [xtuner](https://github.com/InternLM/xtuner) 在 [InternLM2](https://github.com/InternLM/InternLM) 的基础上指令微调而来
 
 特别鸣谢
 

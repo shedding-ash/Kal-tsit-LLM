@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-  <img src="https://github.com/shedding-ash/Kal-tsit-LLM/media/kal.jpg" width="100%">
+  <img src="https://github.com/shedding-ash/Kal-tsit-LLM/blob/main/media/kal.jpg" width="100%">
 </p>
 
 本项目数据来源于

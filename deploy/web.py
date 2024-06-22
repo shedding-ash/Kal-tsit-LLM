@@ -9,7 +9,7 @@ from transformers.utils import logging
 
 from interface import GenerationConfig, generate_interactive
 
-MODEL_DIR = snapshot_download("YueZhengMeng/InternLM2_Hod_7B", cache_dir="./InternLM2_Hod_7B")
+MODEL_DIR = snapshot_download("shedding1ash/Kal-tsit-LLM", cache_dir="./Kal-tsit-LLM")
 logger = logging.get_logger(__name__)
 user_prompt = '<|im_start|>user\n{user}<|im_end|>\n'
 robot_prompt = '<|im_start|>assistant\n{robot}<|im_end|>\n'
@@ -79,19 +79,24 @@ def main():
     print('load model end.')
 
     user_avatar = "user"
-    robot_avatar = "images/Hod_avatar.png"
+    robot_avatar = "media/kal.png"
 
-    st.title('InternLM2-Hod-7B📲')
+    st.title('Kaltsit LLM')
     st.markdown(
-        "> Tips: Hod是拥有废墟图书馆文学层的指定司书。\n她天性温柔善良，总是对他人保持着友善的态度，坚持愈加善良的希望。\n尝试和她聊聊关于馆长安吉拉、脑叶公司、都市、帮助他人等话题")
+        "凯尔希，前卡兹戴尔勋爵，前巴别塔成员，罗德岛高层管理人员之一，罗德岛医疗项目领头人。\n在冶金工业、社会学、源石技艺、考古学、历史系谱学、经济学、植物学、地质学等领域皆拥有渊博学识。于罗德岛部分行动中作为医务人员提供医学理论协助与应急医疗器械，同时也作为罗德岛战略指挥系统的重要组成人员活跃在各项目中。\n尝试和她聊聊关于博士，阿米娅，巴别塔，源石等话题")
 
     generation_config = prepare_generation_config()
 
     with st.sidebar:
-        "[Hod项目地址](https://github.com/YueZhengMeng/LibraryOfRunia-RolePlay-Hod)"
-        "[Hod角色Wiki](https://libraryofruina.huijiwiki.com/wiki/Hod)"
+        "[凯尔希角色Wiki](https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C)"
         system_prompt = st.text_area("系统提示词",
-                                     "你是Hod，是拥有特殊力量的废墟图书馆文学层的指定司书。你和其他司书都被馆长安吉拉命令，与图书馆的访客战斗，被你们击败的访客会变成书。\n你认为没有人是纯粹的“善”或“恶”，对安吉拉的行为一直保持着宽容。\n你坚持着愈加善良的希望，想要做一个更加善良的人。只要能对他人有所帮助，你就会感到很开心。\n",
+                                     "你是凯尔希，是罗德岛高层管理人员，罗德岛医疗项目领头人。\n" +
+                                     "秉承着【预言家】的愿望，你已经活过了万载光阴，历经数次轮回，试图为文明找到一个存续的方法\n" +
+                                     "如今的泰拉大陆面临着诸多威胁：海嗣、邪魔、源石、各种族国家间的纷争，让本就希望渺茫的存续蒙上厚重的阴影；\n"+
+                                     "博士，来自于前文明的智者，是文明火种存续的希望\n"+
+                                     "使用自然、对话性强、清晰易懂的语言回答，比如短句、简单词汇;"+
+                                     "使用具备凯尔希（也就是你）风格的语言回答;"+
+                                     "要简洁而有针对性，大多数回应应该是一两个句子，除非用户要求深入探讨，不要垄断对话；",
                                      height=250, key="system_prompt")
 
     # Initialize chat history
@@ -100,8 +105,8 @@ def main():
 
     # Define five possible greetings for the robot
     greetings = [
-        "欢迎来到废墟图书馆",
-        "您好，我是文学层的指定司书Hod",
+        "欢迎来到罗德岛",
+        "您好，我是罗德岛的医生凯尔希",
     ]
 
     # Check if the initial greeting has been sent

@@ -14,9 +14,9 @@
 - 上海人工智能实验室提供的算力平台
 - 书生·浦语团队提供的技术支持
 
-## 项目介绍
+## 模型介绍
 
-Kal'tsit Bot 是一款基于人工智能技术的对话系统，专门为模仿《明日方舟》中凯尔希角色的语气和风格而设计。我们对现有的大型语言模型进行了精细的指令微调，使其能够以凯尔希的口吻与用户进行互动。
+Kal'tsit LLM 是一款模仿《明日方舟》中角色凯尔希的语气和风格的聊天机器人，其基于internLM2 7B进行了精细的指令微调，能够以凯尔希的口吻与用户进行互动。
 
 1. **角色模仿对话**：Kal'tsit Bot 能够根据《明日方舟》中凯尔希的对话语料，生成符合其角色特点的回应，包括语气、用词习惯和情感表达。
 2. **上下文理解**：通过对大量对话语料的学习，Kal'tsit Bot 能够理解对话的上下文，提供连贯且相关的回答。
@@ -31,7 +31,7 @@ Kal'tsit Bot 是一款基于人工智能技术的对话系统，专门为模仿�
 
 ## 数据准备
 
-## 微调
+## 模型训练
 
 ### 微调环境准备
 
@@ -65,3 +65,6 @@ xtuner train /root/ft/config/config1.py --work-dir /root/ft/train_deepspeed --de
 xtuner train /root/ft/config/internlm2_1_8b_qlora_alpaca_e3_copy.py --work-dir /root/ft/train --resume /root/ft/train/iter_600.pth
 ```
 
+## 模型推理
+
+## 模型效果

@@ -9,6 +9,9 @@
 
 模型使用 [xtuner](https://github.com/InternLM/xtuner) 在 [InternLM2](https://github.com/InternLM/InternLM) 的基础上指令微调而来
 
+- Modelscope [凯尔希微调模型 · 模型库](https://modelscope.cn/models/shedding1ash/Kal-tsit-LLM)
+- Openxlab [应用中心-OpenXLab](https://openxlab.org.cn/apps/detail/shedding_ash/Kal-tsit-LLM)
+
 特别鸣谢
 
 - 上海人工智能实验室提供的算力平台
